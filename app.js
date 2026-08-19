@@ -1,10 +1,28 @@
+const SUPABASE_URL = "https://yafgyjhscrcezmhdkclm.supabase.co"; // حط الـ Project URL تبعك
+const SUPABASE_ANON_KEY = "هنا تحط الـ anon key تبعك";
+
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 const defaultProducts=[
 {name:"خلاط حمام",category:"الخلاطات",price:"السعر عند الاستفسار",description:"خلاط حمام بجودة ممتازة",image:""},
 {name:"خلاط مطبخ",category:"الخلاطات",price:"السعر عند الاستفسار",description:"خلاط مطبخ بتصميم عصري",image:""},
 {name:"خزان مياه",category:"الخزانات",price:"السعر عند الاستفسار",description:"خزانات مياه بمقاسات مختلفة",image:""},
 {name:"وصلات PPR",category:"PPR",price:"السعر عند الاستفسار",description:"وصلات PPR للاستخدامات الصحية",image:""}
 ];
-const getProducts=()=>JSON.parse(localStorage.getItem("ziwanahProducts")||"null")||defaultProducts;
+const getProducts = async () => {
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .order("id", { ascending: false });
+
+  if (error) {
+    console.error("خطأ في جلب المنتجات:", error);
+    return [];
+  }
+
+  return data;
+};
+
 const saveProducts=p=>localStorage.setItem("ziwanahProducts",JSON.stringify(p));
 function renderCategories(){
  const products=getProducts(), counts={};
