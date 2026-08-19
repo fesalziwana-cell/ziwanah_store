@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة زيوانه</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+<header class="site-header"><div class="container nav">
+  <a class="logo-link" href="index.html"><img src="images/logo.png" alt="زيوانه"></a>
+  <a class="btn outline" href="index.html">الموقع العام</a>
+</div></header>
+
+<main class="section">
+<div class="container">
+  <div id="loginBox" class="panel narrow">
+    <div class="section-head"><span>الإدارة</span><h2>تسجيل الدخول</h2></div>
+    <p class="hint">الحساب التجريبي المحلي: admin / 123456</p>
+    <input id="adminUser" placeholder="اسم المستخدم">
+    <input id="adminPass" type="password" placeholder="كلمة المرور">
+    <button id="loginBtn" class="btn primary full">دخول</button>
+    <p id="loginMsg" class="error"></p>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <div class="dashboard-head"><div><span class="eyebrow">لوحة التحكم</span><h1>إدارة المنتجات</h1></div><button id="logoutBtn" class="btn outline">تسجيل الخروج</button></div>
+    <div class="panel">
+      <h2 id="formTitle">إضافة منتج</h2>
+      <form id="productForm">
+        <input type="hidden" id="editId">
+        <div class="form-grid">
+          <input id="pName" required placeholder="اسم المنتج">
+          <input id="pCategory" required placeholder="القسم - مثال: الخلاطات">
+          <input id="pPrice" placeholder="السعر أو: السعر عند الاستفسار">
+          <input id="pImage" type="file" accept="image/*">
+        </div>
+        <textarea id="pDescription" placeholder="وصف المنتج"></textarea>
+        <div class="form-actions"><button class="btn primary" type="submit">حفظ المنتج</button><button class="btn outline" type="button" id="cancelEdit">إلغاء</button></div>
+      </form>
+    </div>
+    <div class="panel">
+      <div class="toolbar"><input id="adminSearch" placeholder="🔎 بحث داخل المنتجات"><button id="clearProducts" class="btn danger">حذف كل المنتجات</button></div>
+      <div id="adminProducts" class="admin-grid"></div>
+    </div>
+  </div>
+</div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

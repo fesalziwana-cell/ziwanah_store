@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>زيوانه | الأدوات الصحية والسباكة</title>
+  <meta name="description" content="زيوانه لتجارة الأدوات الصحية والسباكة في حمص - جب الجندلي">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo-link" href="#home"><img src="images/logo.png" alt="زيوانه"></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav id="mainNav">
+      <a href="#home">الرئيسية</a>
+      <a href="#categories">الأقسام</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">أهلاً بكم في</span>
+      <h1>زيوانه</h1>
+      <h2>لتجارة الأدوات الصحية والسباكة</h2>
+      <p>تشكيلة واسعة من الأدوات الصحية ومستلزمات السباكة، بجودة جيدة وأسعار منافسة.</p>
+      <div class="actions">
+        <a class="btn primary" href="#products">تصفح المنتجات</a>
+        <a class="btn outline" href="#contact">تواصل معنا</a>
+      </div>
+    </div>
+    <div class="hero-logo"><img src="images/logo.png" alt="شعار زيوانه"></div>
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <div class="container">
+    <div class="section-head"><span>تصفح منتجاتنا</span><h2>أقسام المنتجات</h2></div>
+    <div id="categoryGrid" class="category-grid"></div>
+  </div>
+</section>
+
+<section id="products" class="section products-section">
+  <div class="container">
+    <div class="section-head"><span>منتجاتنا</span><h2>المنتجات</h2></div>
+    <div class="toolbar">
+      <input id="searchInput" type="search" placeholder="🔎 ابحث عن منتج...">
+      <select id="categoryFilter"><option value="">كل الأقسام</option></select>
+    </div>
+    <div id="productsGrid" class="products-grid"></div>
+  </div>
+</section>
+
+<section id="about" class="about section">
+  <div class="container about-grid">
+    <img src="images/logo.png" alt="زيوانه">
+    <div><span class="eyebrow">من نحن</span><h2>زيوانه للأدوات الصحية والسباكة</h2>
+    <p>متجر متخصص في تجارة الأدوات الصحية ومستلزمات السباكة، ونحرص على توفير منتجات متنوعة تلبي احتياجات الزبائن.</p>
+    <p>للاستفسار عن الأسعار والتوفر، تواصلوا معنا مباشرة.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head"><span>تواصل معنا</span><h2>نحن هنا لخدمتكم</h2></div>
+    <div class="contact-grid">
+      <div class="contact-card"><b>📍</b><h3>العنوان</h3><p>حمص - حي جب الجندلي<br>شارع اسكندرون</p></div>
+      <div class="contact-card"><b>📞</b><h3>الهاتف</h3><p id="phoneText"> فيصل 0949267492 // محمد0949702171</p></div>
+      <div class="contact-card"><b>💬</b><h3>الاستفسار</h3><p>راسلنا لمعرفة السعر والتوفر.</p></div>
+    </div>
+    <div class="map-box">
+      <h3>موقع المحل</h3>
+      <p>حمص - حي جب الجندلي - شارع اسكندرون</p>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=جب+الجندلي+حمص+سوريا">فتح الموقع على خرائط Google</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer"><img src="images/logo.png" alt="زيوانه"><p>© <span id="year"></span> زيوانه - جميع الحقوق محفوظة</p><a href="admin.html">دخول الإدارة</a></div></footer>
+
+<a id="whatsappBtn" class="floating" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+<script src="app.js"></script>
+</body>
+</html>
